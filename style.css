@@ -1,0 +1,255 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+.container {
+  display: flex;
+}
+
+main {
+  width: 60%;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: repeat(4, 200px);
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  margin-left: 20rem;
+}
+
+.fuck {
+  background-color: rgba(255, 233, 33, 0.333);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+aside {
+  grid-area: 1/1/2/2;
+  background-color: #f65e51;
+  color: white;
+  width: 230px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 80px;
+  position: fixed;
+}
+
+.library-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  font-size: 2rem;
+}
+
+.app-name {
+  font-size: 2.5rem;
+  cursor: default;
+}
+
+.library-book-num {
+  font-size: 1rem;
+  background-color: #fac6c22f;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.library-menu a:link,
+.library-menu a:active {
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.1s ease-in;
+}
+
+.library-menu a:hover {
+  color: black;
+}
+
+.form-box {
+  color: #67615c;
+  z-index: 1;
+  position: absolute;
+  left: 30%;
+  height: 650px;
+  width: 30rem;
+  background-color: rgb(255, 255, 255);
+  padding-left: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  color: #f65e51;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+input {
+  width: 90%;
+  height: 2.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  border: 1px solid rgb(224, 224, 224);
+}
+
+input:focus {
+  border: 2px solid #f65e51;
+  outline: none;
+}
+
+#isRead {
+  width: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.submit-btn {
+  color: white;
+  border: 1px solid #f65e51;
+  display: block;
+  padding: 1.1rem 4.5rem;
+  background-color: #f65e51;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-left: 5rem;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  color: #f65e51;
+  background-color: white;
+  border: 1px solid #f65e51;
+}
+
+.close-btn {
+  position: relative;
+  left: 380px;
+  bottom: 5px;
+  font-size: 0.9rem;
+  color: #909090;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: black;
+}
+
+.toggle-form-box {
+
+
+  display: none;
+}
+
+.overlay {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.hidden {
+  display: none;
+}

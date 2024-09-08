@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Libraria</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="overlay hidden"></div>
+    <div class="container">
+      <aside>
+        <h1 class="app-name">Librarium</h1>
+        <div class="library-menu">
+          <a href="#">Home</a><a href="#">Add Book</a>
+        </div>
+        <div class="library-book-num">Total Books: 0</div>
+      </aside>
+      <main>
+      </main>
+      <div class="form-box toggle-form-box">
+        <p class="close-btn">Close</p>
+        <h3>Add Book</h3>
+        <form action="#">
+          <label for="book-name">Book Name</label>
+          <input type="text" id="book-name" />
+          <label for="author-name">Author</label>
+          <input type="text" id="author-name" />
+          <label for="page-number">Page Count</label>
+          <input type="number" id="page-number" />
+          <label for="isRead">Read Status</label>
+          <input type="checkbox" id="isRead" />
+          <button class="submit-btn">Add Book</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
