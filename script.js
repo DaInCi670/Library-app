@@ -80,11 +80,30 @@ addBookBtn[1].addEventListener("click", () => {
 
 submitBook.addEventListener("click", (e) => {
   e.preventDefault();
+  let ruby = [];
   const title = e.target.form[0].value;
+  ruby.push(title);
   const author = e.target.form[1].value;
+  ruby.push(author);
   const pages = e.target.form[2].value;
+  ruby.push(pages);
   const isRead = e.target.form[3].checked;
-  console.log(pages.length);
+
+  // ruby = ruby.filter((item) => {
+  //   return item !== " ";
+  // });
+
+  if (ruby.includes("") || ruby.includes(" ")) {
+    ruby = [];
+    return;
+  }
+  if (ruby.includes(" ")) {
+    console.log(ruby);
+    ruby.splice(0);
+    return;
+  }
+
+  console.log(ruby);
 
   if (!title || !author || pages.length < 1) {
     return;
