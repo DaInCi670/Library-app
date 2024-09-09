@@ -79,6 +79,7 @@ addBookBtn[1].addEventListener("click", () => {
 });
 
 submitBook.addEventListener("click", (e) => {
+  e.preventDefault();
   const title = e.target.form[0].value;
   const author = e.target.form[1].value;
   const pages = e.target.form[2].value;
