@@ -99,6 +99,7 @@ body {
 }
 
 main {
+  padding-top: 50px;
   width: 60%;
   display: grid;
   gap: 20px;
@@ -107,11 +108,12 @@ main {
   margin-left: 20rem;
 }
 
-.fuck {
-  background-color: rgba(255, 233, 33, 0.333);
+.bookContainer {
+  color: #4e4e4e;
+  background-color: #ffebeb;
   border-radius: 10px;
-  padding: 10px;
-  font-size: 1.2rem;
+  padding-left: 30px;
+  font-size: 1rem;
 }
 
 aside {
@@ -235,8 +237,6 @@ input:focus {
 }
 
 .toggle-form-box {
-
-
   display: none;
 }
 
@@ -252,4 +252,23 @@ input:focus {
 
 .hidden {
   display: none;
+}
+
+button {
+  background-color: #f65e51;
+  border: 1px solid #f65e51;
+  border-radius: 20px;
+  padding: 8px 1rem;
+  margin-left: 1.2rem;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: white;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: #f65e51;
+  border: 1px solid #f65e51;
 }
