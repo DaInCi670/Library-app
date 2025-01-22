@@ -10,16 +10,18 @@ const libraryShelf = document.querySelector("main");
 
 const myLibrary = [];
 
-function Book(author, title, pageNumber, isRead) {
-  this.author = author;
-  this.title = title;
-  this.pageNumber = pageNumber;
-  this.isRead = isRead;
-}
+class Book {
+  constructor(author, title, pageNumber, isRead) {
+    this.author = author;
+    this.title = title;
+    this.pageNumber = pageNumber;
+    this.isRead = isRead;
+  }
+  changeReadStatus() {
+    return this.isRead ? "Read" : "Not Read";
+  }
 
-Book.prototype.changeReadStatus = function () {
-  return this.isRead ? "Read" : "Not Read";
-};
+}
 
 function addBookToLibarary(a, b, c, d) {
   const complete = new Book(a, b, c, d);
